@@ -1,6 +1,6 @@
 %{
 /*
-* pascal.y
+* pascal.y 
 *
 * Pascal grammar in Yacc format, based originally on BNF given
 * in "Standard Pascal -- User Reference Manual", by Doug Cooper.
