@@ -87,8 +87,6 @@ ID      {PAL}{PAL|NUM}*
 [0-9]+                              return(T_INT);
 \n                                  line_no++;
 [\t\f " "\ ]                        ;
-.                                   { fprintf (stderr, "'%c' (0%o): 
-                                        illegal character at line %d\n", 
-                                    yytext[0], yytext[0], line_no);}
+.                                   { fprintf (stderr, "'%c' (0%o): illegal character at line %d\n", yytext[0], yytext[0], line_no);}
 %%
 
