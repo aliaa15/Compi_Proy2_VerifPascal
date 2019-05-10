@@ -35,7 +35,7 @@ ID      {PAL}{PAL|NUM}*
 <COMMENT2>"*)"       BEGIN(INITIAL);
 <COMMENT2>[*)]
 
-"\'"                     return(T_COMISIMPLE);
+"\'"                    return(T_COMISIMPLE);
 ":="                    return(T_ASSIGNMENT);
 "="	                    return(T_CEQ);
 "<>"                    return(T_CNE);
@@ -79,7 +79,7 @@ ID      {PAL}{PAL|NUM}*
 "integer"|"INTEGER"     return(T_INTEGER);
 "real"|"REAL"           return(T_REAL);
 "readln"|"READLN"	    return(T_READ);
-"writeln"|"WRITELN"		return(T_WRITE);
+"writeln"|"WRITELN"|"WRITE"|"write"		return(T_WRITE);
 "char"|"CHAR"           return(T_CHAR);
 "uses"|"USES"           return(T_USES);
 [A-Za-z_][A-Za-z0-9_]*  return(T_IDENTIFIER);
