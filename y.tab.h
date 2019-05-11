@@ -87,15 +87,16 @@
      T_WHILE = 303,
      T_DO = 304,
      T_COMISIMPLE = 305,
-     T_IF = 306,
-     T_THEN = 307,
-     T_ELSE = 308,
-     T_USES = 309,
-     T_INT_ARR = 310,
-     TMINUS = 311,
-     TPLUS = 312,
-     TDIV = 313,
-     TMUL = 314
+     T_CASE = 306,
+     T_IF = 307,
+     T_THEN = 308,
+     T_ELSE = 309,
+     T_USES = 310,
+     T_INT_ARR = 311,
+     TMINUS = 312,
+     TPLUS = 313,
+     TDIV = 314,
+     TMUL = 315
    };
 #endif
 /* Tokens.  */
@@ -147,15 +148,16 @@
 #define T_WHILE 303
 #define T_DO 304
 #define T_COMISIMPLE 305
-#define T_IF 306
-#define T_THEN 307
-#define T_ELSE 308
-#define T_USES 309
-#define T_INT_ARR 310
-#define TMINUS 311
-#define TPLUS 312
-#define TDIV 313
-#define TMUL 314
+#define T_CASE 306
+#define T_IF 307
+#define T_THEN 308
+#define T_ELSE 309
+#define T_USES 310
+#define T_INT_ARR 311
+#define TMINUS 312
+#define TPLUS 313
+#define TDIV 314
+#define TMUL 315
 
 
 

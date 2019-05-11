@@ -63,6 +63,7 @@ ID      {PAL}{PAL|NUM}*
 "not"                               return(T_NOT);
 "input"                             return(T_INPUT);
 "output"                            return(T_OUTPUT);
+"case"                              return(T_CASE);
 ";"                                 return(T_SEMICOLON);
 ":"                                 return(T_COLON);
 "if"|"IF"                           return(T_IF);
@@ -79,7 +80,7 @@ ID      {PAL}{PAL|NUM}*
 "integer"|"INTEGER"                 return(T_INTEGER);
 "real"|"REAL"                       return(T_REAL);
 "readln"|"READLN"	                return(T_READ);
-"writeln"|"WRITELN"|"WRITE"|"write" return(T_WRITE);
+"writeln"|"WRITELN"|"WRITE"|"write"|"WriteLn"     return(T_WRITE);
 "char"|"CHAR"                       return(T_CHAR);
 "uses"|"USES"                       return(T_USES);
 [A-Za-z_][A-Za-z0-9_]*              return(T_IDENTIFIER);
