@@ -84,19 +84,21 @@
      T_CSPAREN = 300,
      T_ARRAY = 301,
      T_CHAR_DEF = 302,
-     T_WHILE = 303,
-     T_DO = 304,
-     T_COMISIMPLE = 305,
-     T_CASE = 306,
-     T_IF = 307,
-     T_THEN = 308,
-     T_ELSE = 309,
-     T_USES = 310,
-     T_INT_ARR = 311,
-     TMINUS = 312,
-     TPLUS = 313,
-     TDIV = 314,
-     TMUL = 315
+     T_TO = 303,
+     T_WHILE = 304,
+     T_DO = 305,
+     T_COMISIMPLE = 306,
+     T_CASE = 307,
+     T_FOR = 308,
+     T_IF = 309,
+     T_THEN = 310,
+     T_ELSE = 311,
+     T_USES = 312,
+     T_INT_ARR = 313,
+     TMINUS = 314,
+     TPLUS = 315,
+     TDIV = 316,
+     TMUL = 317
    };
 #endif
 /* Tokens.  */
@@ -145,19 +147,21 @@
 #define T_CSPAREN 300
 #define T_ARRAY 301
 #define T_CHAR_DEF 302
-#define T_WHILE 303
-#define T_DO 304
-#define T_COMISIMPLE 305
-#define T_CASE 306
-#define T_IF 307
-#define T_THEN 308
-#define T_ELSE 309
-#define T_USES 310
-#define T_INT_ARR 311
-#define TMINUS 312
-#define TPLUS 313
-#define TDIV 314
-#define TMUL 315
+#define T_TO 303
+#define T_WHILE 304
+#define T_DO 305
+#define T_COMISIMPLE 306
+#define T_CASE 307
+#define T_FOR 308
+#define T_IF 309
+#define T_THEN 310
+#define T_ELSE 311
+#define T_USES 312
+#define T_INT_ARR 313
+#define TMINUS 314
+#define TPLUS 315
+#define TDIV 316
+#define TMUL 317
 
 
 

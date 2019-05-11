@@ -1,4 +1,4 @@
-program if5;
+program PASCAL2;
 
 
     var

@@ -24,8 +24,8 @@ void yyerror(char *msg);
 %token T_ASSIGNMENT T_CEQ T_CNE T_CLT T_CLE T_CGT T_CGE T_BOOLEAN T_TEXT
 %token T_OPAREN T_CPAREN T_COMMA T_DOT T_DOUBLEDOT T_COLON T_SEMICOLON
 %token T_PLUS T_MINUS T_MUL T_DIV T_AND T_OR T_NOT T_MOD
-%token T_OF T_OSPAREN T_CSPAREN T_ARRAY T_CHAR_DEF
-%token T_WHILE T_DO T_COMISIMPLE T_CASE
+%token T_OF T_OSPAREN T_CSPAREN T_ARRAY T_CHAR_DEF T_TO
+%token T_WHILE T_DO T_COMISIMPLE T_CASE T_FOR
 %token T_IF T_THEN T_ELSE T_USES T_INT_ARR
 
 %left TPLUS TMINUS
@@ -108,6 +108,7 @@ statement : variable T_ASSIGNMENT expression
 		| T_READ read
 		| T_WRITE write
 		| T_CASE id T_OF adentro_de_case case_else T_END 
+		| T_FOR id T_ASSIGNMENT T_INT T_TO T_INT T_DO optional_statements
 		|
 		;
 
@@ -148,6 +149,7 @@ contenido_write : T_COMISIMPLE texto T_COMISIMPLE contenido_write
 		| T_COMMA contenido_write
 		| T_PLUS contenido_write
 		| id contenido_write
+		| T_MUL contenido_write
 		|
 		;
 

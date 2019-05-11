@@ -60,13 +60,16 @@ ID      {PAL}{PAL|NUM}*
 "array"                             return(T_ARRAY);
 "boolean"                           return(T_BOOLEAN);
 "of"                                return(T_OF);
+"to"                                return(T_TO);
+"do"                                return(T_DO);
 "not"                               return(T_NOT);
 "input"                             return(T_INPUT);
 "output"                            return(T_OUTPUT);
-"case"                              return(T_CASE);
+"case"|"CASE"                       return(T_CASE);
 ";"                                 return(T_SEMICOLON);
 ":"                                 return(T_COLON);
 "if"|"IF"                           return(T_IF);
+"for"|"FOR"                         return(T_FOR);
 "then"|"THEN"                       return(T_THEN);
 "else"|"ELSE"                       return(T_ELSE);
 "while"|"WHILE"                     return(T_WHILE);

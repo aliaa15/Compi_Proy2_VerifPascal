@@ -1,4 +1,4 @@
-program case1;
+program PASCAL3;
 
 
     var
