@@ -51,8 +51,11 @@ identifier_list : id
 		| identifier_list T_COMMA id
 		;
 		
-declarations : declarations T_VAR identifier_list T_COLON type T_SEMICOLON
+declarations : declarations T_VAR variables_despues__de_var
 		|
+		;
+
+variables_despues__de_var : identifier_list T_COLON type T_SEMICOLON variables_despues__de_var
 		;
 
 type : standard_type
