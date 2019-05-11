@@ -107,7 +107,7 @@ statement : variable T_ASSIGNMENT expression
 
 contenido_write : T_COMISIMPLE texto T_COMISIMPLE contenido_write
 		| T_PLUS contenido_write
-		| id
+		| id contenido_write
 		|
 		;
 
