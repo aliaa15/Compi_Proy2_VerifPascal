@@ -26,7 +26,7 @@ void yyerror(char *msg);
 %token T_PLUS T_MINUS T_MUL T_DIV T_AND T_OR T_NOT T_MOD
 %token T_OF T_OSPAREN T_CSPAREN T_ARRAY T_CHAR_DEF
 %token T_WHILE T_DO T_COMISIMPLE
-%token T_IF T_THEN T_ELSE T_USES
+%token T_IF T_THEN T_ELSE T_USES T_INT_ARR
 
 %left TPLUS TMINUS
 %left TMUL TDIV
@@ -46,17 +46,17 @@ program : T_PROGRAM id T_SEMICOLON
 librerias : T_USES id T_SEMICOLON
 		|
 		;
-
-identifier_list : id
-		| identifier_list T_COMMA id
-		;
 		
 declarations : declarations T_VAR identifier_list T_COLON type T_SEMICOLON
 		|
 		;
 
+identifier_list : id
+		| identifier_list T_COMMA id
+		;
+
 type : standard_type
-		| T_ARRAY T_OSPAREN T_INT T_DOUBLEDOT T_INT T_CSPAREN T_OF standard_type 
+		| T_ARRAY T_OSPAREN T_INT_ARR T_CSPAREN T_OF standard_type 
 		;
 
 standard_type : T_INTEGER

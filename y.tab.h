@@ -91,10 +91,11 @@
      T_THEN = 307,
      T_ELSE = 308,
      T_USES = 309,
-     TMINUS = 310,
-     TPLUS = 311,
-     TDIV = 312,
-     TMUL = 313
+     T_INT_ARR = 310,
+     TMINUS = 311,
+     TPLUS = 312,
+     TDIV = 313,
+     TMUL = 314
    };
 #endif
 /* Tokens.  */
@@ -150,10 +151,11 @@
 #define T_THEN 307
 #define T_ELSE 308
 #define T_USES 309
-#define TMINUS 310
-#define TPLUS 311
-#define TDIV 312
-#define TMUL 313
+#define T_INT_ARR 310
+#define TMINUS 311
+#define TPLUS 312
+#define TDIV 313
+#define TMUL 314
 
 
 

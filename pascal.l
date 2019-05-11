@@ -84,6 +84,7 @@ ID      {PAL}{PAL|NUM}*
 "uses"|"USES"                       return(T_USES);
 [A-Za-z_][A-Za-z0-9_]*              return(T_IDENTIFIER);
 [0-9]+\.[0-9]*                      return(T_DBL);
+[0-9]+\.\.[0-9]+                    return(T_INT_ARR);
 [0-9]+                              return(T_INT);
 \n                                  line_no++;
 [\t\f " "\ ]                        ;
