@@ -56,7 +56,10 @@ identifier_list : id
 		;
 
 type : standard_type
-		| T_ARRAY T_OSPAREN T_INT_ARR T_CSPAREN T_OF standard_type 
+		| T_ARRAY  
+		;
+
+variable_despues_de_array : T_OSPAREN T_INT_ARR T_CSPAREN T_OF standard_type variable_despues_de_array
 		;
 
 standard_type : T_INTEGER
