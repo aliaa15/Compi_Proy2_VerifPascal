@@ -47,7 +47,11 @@ librerias : T_USES id T_SEMICOLON
 		|
 		;
 		
-declarations : declarations T_VAR identifier_list T_COLON type T_SEMICOLON
+declarations : declarations T_VAR despuees_var
+		|
+		;
+
+despuees_var : identifier_list T_COLON type T_SEMICOLON despuees_var
 		|
 		;
 
@@ -56,11 +60,7 @@ identifier_list : id
 		;
 
 type : standard_type
-		| T_ARRAY  variable_despues_de_array
-		;
-
-variable_despues_de_array : T_OSPAREN T_INT_ARR T_CSPAREN T_OF standard_type T_SEMICOLON variable_despues_de_array
-		|
+		| T_ARRAY  T_OSPAREN T_INT_ARR T_CSPAREN T_OF standard_type
 		;
 
 standard_type : T_INTEGER
@@ -106,7 +106,11 @@ statement : variable T_ASSIGNMENT expression
 		| T_IF expression T_THEN statement T_ELSE statement
 		| T_WHILE expression T_DO statement
 		| T_READ T_OPAREN id T_CPAREN
-		| T_WRITE T_OPAREN contenido_write T_CPAREN
+		| T_WRITE write
+		;
+
+write : T_OPAREN contenido_write T_CPAREN
+		| 
 		;
 
 contenido_write : T_COMISIMPLE texto T_COMISIMPLE contenido_write
@@ -117,6 +121,7 @@ contenido_write : T_COMISIMPLE texto T_COMISIMPLE contenido_write
 
 texto : id texto
 		| simbolos texto
+		| T_INT texto
 		|
 		;
 
