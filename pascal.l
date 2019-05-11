@@ -63,7 +63,6 @@ ID      {PAL}{PAL|NUM}*
 "not"                               return(T_NOT);
 "input"                             return(T_INPUT);
 "output"                            return(T_OUTPUT);
-"vector"                            return(T_VECTOR);
 ";"                                 return(T_SEMICOLON);
 ":"                                 return(T_COLON);
 "if"|"IF"                           return(T_IF);

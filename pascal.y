@@ -25,7 +25,7 @@ void yyerror(char *msg);
 %token T_OPAREN T_CPAREN T_COMMA T_DOT T_DOUBLEDOT T_COLON T_SEMICOLON
 %token T_PLUS T_MINUS T_MUL T_DIV T_AND T_OR T_NOT T_MOD
 %token T_OF T_OSPAREN T_CSPAREN T_ARRAY T_CHAR_DEF
-%token T_WHILE T_DO T_COMISIMPLE T_VECTOR
+%token T_WHILE T_DO T_COMISIMPLE
 %token T_IF T_THEN T_ELSE T_USES T_INT_ARR
 
 %left TPLUS TMINUS
@@ -114,8 +114,7 @@ read : T_OPAREN contenido_read T_CPAREN
 		;
 
 contenido_read : id contenido_read
-		| T_VECTOR contenido_read
-		| 
+		| id T_OSPAREN T_INT T_CSPAREN
 		;
 
 write : T_OPAREN contenido_write T_CPAREN
@@ -123,6 +122,7 @@ write : T_OPAREN contenido_write T_CPAREN
 		;
 
 contenido_write : T_COMISIMPLE texto T_COMISIMPLE contenido_write
+		| T_COMMA contenido_write
 		| T_PLUS contenido_write
 		| id contenido_write
 		|
