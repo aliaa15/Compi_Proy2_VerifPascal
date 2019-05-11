@@ -18,4 +18,4 @@ begin
   suma := vector[1] + vector[2] + vector[3] + vector[4] + vector[5];
   media := suma / 5;
   writeln('La media de sus elementos es: ', media);
-end.
+end. 

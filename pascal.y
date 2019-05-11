@@ -107,6 +107,7 @@ statement : variable T_ASSIGNMENT expression
 		| T_WHILE expression T_DO statement
 		| T_READ read
 		| T_WRITE write
+		|
 		;
 
 read : T_OPAREN contenido_read T_CPAREN
